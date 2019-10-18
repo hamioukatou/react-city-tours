@@ -9,6 +9,7 @@ export default class Tour extends Component {
             showInfo: false
         }
     }
+
     handleInfo = () => {
         this.setState({
             showInfo : !this.state.showInfo
@@ -33,9 +34,10 @@ export default class Tour extends Component {
                         info{" "}
                         <span onClick={this.handleInfo}><i className="fas fa-caret-square-down" /></span>
                     </h5>
-                    {this.state.showInfo && <p>{info}</p>}
+                    {this.state.showInfo ? <p>{info}</p> : null}
                 </div>
             </article>
+            
         )
     }
 }
